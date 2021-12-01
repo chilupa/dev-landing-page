@@ -1,9 +1,9 @@
+import React from 'react';
 import Bio from '../../components/Bio/Bio';
-
-const { Container, Box, makeStyles, Typography } = require('@material-ui/core');
-const {
-  default: SocialMedia,
-} = require('../../components/SocialMedia/SocialMedia');
+import Header from '../../components/Header/Header';
+import { Container, Box, Typography, useTheme } from '@mui/material';
+import SocialMedia from '../../components/SocialMedia/SocialMedia';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
   container: {
@@ -17,13 +17,16 @@ const useStyles = makeStyles({
 
 const App = () => {
   const classes = useStyles();
+
   return (
     <Container maxWidth="lg">
+      <Header />
       <Box className={classes.container}>
         <Box className={classes.box}>
           <Typography variant="h1" color="primary">
             Hi, I'm Pavan!
           </Typography>
+
           <Bio />
           <Box pt={2}>
             <SocialMedia />

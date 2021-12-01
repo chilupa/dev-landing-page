@@ -1,10 +1,11 @@
 import React from 'react';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import { Box, IconButton } from '@material-ui/core';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
+
+import { Box, IconButton } from '@mui/material';
+import { GitHub, LinkedIn } from '@mui/icons-material';
+
 const icons = [
-  { label: 'github', name: <GitHubIcon />, url: 'https://github.com/' },
-  { label: 'linkedin', name: <LinkedInIcon />, url: 'https://linkedin.com/' },
+  { label: 'github', name: <GitHub />, url: 'https://github.com/' },
+  { label: 'linkedin', name: <LinkedIn />, url: 'https://linkedin.com/' },
 ];
 
 const SocialMedia = () => {
@@ -17,6 +18,7 @@ const SocialMedia = () => {
           onClick={() => handleClick(icon.url)}
           key={index}
           color="secondary"
+          size="large"
         >
           {icon.name}
         </IconButton>

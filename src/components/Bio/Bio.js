@@ -1,6 +1,9 @@
-import { Box, makeStyles, Typography } from '@material-ui/core';
 import React from 'react';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import { Box, Typography } from '@mui/material';
+
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import { makeStyles } from '@mui/styles';
+
 const useStyles = makeStyles({
   container: {
     display: 'flex',

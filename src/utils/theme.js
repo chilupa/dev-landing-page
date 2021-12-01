@@ -1,25 +1,10 @@
-import { createTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import { colors } from '@mui/material';
+import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
-let theme = createTheme({
-  typography: {
-    fontFamily: [
-      'Raleway',
-      '-apple-system',
-      'BlinkMacSystemFont',
-      '"Segoe UI"',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(','),
-    h1: {
-      fontWeight: 600,
-    },
-  },
-});
-theme = responsiveFontSizes(theme);
+const theme = responsiveFontSizes(
+  createTheme({
+    palette: {},
+  })
+);
 
 export default theme;
