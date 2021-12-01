@@ -1,0 +1,12 @@
+name: Run lint and tests
+'on': [pull_request]
+jobs:
+  lint-runner:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run lint and tests
+        run: |
+          npm install
+          npm run lint
+          npm run test
