@@ -13,9 +13,9 @@ Keeping responsiveness in mind, I have developed this app which can fit in all t
  </tr>
  <tr>
     <td style="width: 50%">
-    <img src="public/images/home-page-desktop.png" alt="desktop-view"/>
+    <img src="public/images/desktop-view.png" alt="desktop-view"/>
     </td>
-    <td style="width: 50%; height: 250px"><img src="public/images/home-page-mobile.png" alt="mobile-view"/></td>
+    <td style="width: 50%; height: 140px"><img src="public/images/mobile-view.png" alt="mobile-view"/></td>
  </tr>
 </table>
 
