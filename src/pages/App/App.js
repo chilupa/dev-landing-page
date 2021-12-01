@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Bio from '../../components/Bio/Bio';
 import Header from '../../components/Header/Header';
-import { Container, Box, Typography, useTheme, colors } from '@mui/material';
+import { Container, Box, Typography, colors } from '@mui/material';
 import SocialMedia from '../../components/SocialMedia/SocialMedia';
 import { makeStyles } from '@mui/styles';
 import {
@@ -12,10 +12,10 @@ import {
 
 const useStyles = makeStyles({
   container: {
-    height: '100vh',
+    height: '90vh',
     display: 'flex',
-    justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'center',
     textAlign: 'center',
   },
 });
@@ -33,6 +33,21 @@ const App = () => {
             primary: { main: primaryColor },
             secondary: { main: secondaryColor },
           },
+          typography: {
+            fontFamily: [
+              'Ubuntu',
+              '-apple-system',
+              'BlinkMacSystemFont',
+              '"Segoe UI"',
+              'Roboto',
+              '"Helvetica Neue"',
+              'Arial',
+              'sans-serif',
+              '"Apple Color Emoji"',
+              '"Segoe UI Emoji"',
+              '"Segoe UI Symbol"',
+            ].join(','),
+          },
         })
       ),
     [primaryColor, secondaryColor]
@@ -49,14 +64,13 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container maxWidth="lg">
+      <Container maxWidth="xl" sx={{ backgroundColor: colors.grey[50] }}>
         <Header {...headerProps} />
         <Box className={classes.container}>
           <Box>
             <Typography variant="h1" color="primary">
               Hi, I'm Pavan!
             </Typography>
-
             <Bio />
             <Box pt={2}>
               <SocialMedia />

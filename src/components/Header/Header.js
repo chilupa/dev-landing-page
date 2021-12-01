@@ -1,43 +1,37 @@
-import React from 'react';
-import { Box, colors } from '@mui/material';
-
-const colorPalettes = [
-  { primary: colors.blue[700], secondary: colors.orange[500] },
-  { primary: colors.teal[800], secondary: colors.teal[400] },
-  { primary: colors.orange[900], secondary: colors.purple[400] },
-  { primary: colors.green[800], secondary: colors.orange[600] },
-  { primary: colors.blue[800], secondary: colors.pink[500] },
-];
+import React, { useState } from 'react';
+import { Box, IconButton } from '@mui/material';
+import PaletteIcon from '@mui/icons-material/Palette';
+import CloseIcon from '@mui/icons-material/Close';
+import Toast from '../Toast/Toast';
+import ColorPalettes from '../ColorPalettes/ColorPalettes';
 
 const Header = ({ handlePaletteChange }) => {
+  const [toggle, setToggle] = useState(false);
+  const [openToast, setOpenToast] = useState(false);
+
   return (
-    <Box display="flex" flexDirection="row" gap={2} pt={1}>
-      {colorPalettes.map(({ primary, secondary }, index) => (
-        <Box
-          key={index}
-          display="flex"
-          flexDirection="row"
-          sx={{ cursor: 'pointer' }}
-          onClick={() => handlePaletteChange(primary, secondary)}
-        >
-          <Box
-            p={2}
-            sx={{
-              backgroundColor: primary,
-              borderTopLeftRadius: '5%',
-              borderBottomLeftRadius: '5%',
-            }}
-          ></Box>
-          <Box
-            p={2}
-            sx={{
-              backgroundColor: secondary,
-              borderTopRightRadius: '5%',
-              borderBottomRightRadius: '5%',
-            }}
-          ></Box>
+    <Box pt={1}>
+      <Box display="flex" alignItems="center" justifyContent="flex-end">
+        {toggle && (
+          <ColorPalettes
+            handlePaletteChange={handlePaletteChange}
+            setOpenToast={setOpenToast}
+          />
+        )}
+        <Box>
+          <IconButton
+            aria-label="color palette"
+            onClick={() => setToggle(!toggle)}
+          >
+            {!toggle ? (
+              <PaletteIcon color="warning" />
+            ) : (
+              <CloseIcon color="error" />
+            )}
+          </IconButton>
         </Box>
-      ))}
+      </Box>
+      <Toast open={openToast} setOpen={setOpenToast} message="Theme changed!" />
     </Box>
   );
 };
