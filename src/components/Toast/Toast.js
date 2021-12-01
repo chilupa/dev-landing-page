@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Snackbar } from '@mui/material';
 
-const Toast = ({ open, setOpen, severity, message }) => {
+const Toast = ({ open, setOpen, message }) => {
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
       return;

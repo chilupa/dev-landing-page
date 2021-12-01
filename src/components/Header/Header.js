@@ -4,6 +4,7 @@ import PaletteIcon from '@mui/icons-material/Palette';
 import CloseIcon from '@mui/icons-material/Close';
 import Toast from '../Toast/Toast';
 import ColorPalettes from '../ColorPalettes/ColorPalettes';
+import PropTypes from 'prop-types';
 
 const Header = ({ handlePaletteChange }) => {
   const [toggle, setToggle] = useState(false);
@@ -34,6 +35,10 @@ const Header = ({ handlePaletteChange }) => {
       <Toast open={openToast} setOpen={setOpenToast} message="Theme changed!" />
     </Box>
   );
+};
+
+Header.propTypes = {
+  handlePaletteChange: PropTypes.func,
 };
 
 export default Header;

@@ -48,9 +48,9 @@ const App = () => {
               '"Segoe UI Symbol"',
             ].join(','),
           },
-        })
+        }),
       ),
-    [primaryColor, secondaryColor]
+    [primaryColor, secondaryColor],
   );
 
   const handlePaletteChange = (primaryColor, secondaryColor) => {
