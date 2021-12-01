@@ -1,25 +1,15 @@
 import React from 'react';
-
-import { Box, IconButton, colors } from '@mui/material';
-
-import { useTheme } from '@mui/styles';
-import theme from '../../utils/theme';
+import { Box, colors } from '@mui/material';
 
 const colorPalettes = [
   { primary: colors.blue[700], secondary: colors.orange[500] },
-  { primary: colors.purple[500], secondary: colors.teal[200] },
-  { primary: colors.purple[500], secondary: colors.orange[600] },
-  { primary: colors.green[800], secondary: colors.orange[800] },
+  { primary: colors.teal[800], secondary: colors.teal[400] },
+  { primary: colors.orange[900], secondary: colors.purple[400] },
+  { primary: colors.green[800], secondary: colors.orange[600] },
+  { primary: colors.blue[800], secondary: colors.pink[500] },
 ];
 
-const handlePaletteChange = (primaryColor, secondaryColor) => {
-  console.log(`primaryColor`, primaryColor);
-  console.log(`secondaryColor`, secondaryColor);
-  theme.palette.primary.main = primaryColor;
-  theme.palette.secondary.main = secondaryColor;
-};
-
-const Header = () => {
+const Header = ({ handlePaletteChange }) => {
   return (
     <Box display="flex" flexDirection="row" gap={2} pt={1}>
       {colorPalettes.map(({ primary, secondary }, index) => (
