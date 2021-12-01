@@ -1,6 +1,9 @@
-import { Box, makeStyles, Typography } from '@material-ui/core';
 import React from 'react';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import { Box } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import Text from './Text';
+import Dot from './Dot';
+
 const useStyles = makeStyles({
   container: {
     display: 'flex',
@@ -9,22 +12,9 @@ const useStyles = makeStyles({
     gap: 8,
   },
   icon: {
-    fontSize: 8,
+    fontSize: '8px',
   },
 });
-
-const Dot = () => {
-  const classes = useStyles();
-  return (
-    <Box>
-      <FiberManualRecordIcon className={classes.icon} />
-    </Box>
-  );
-};
-
-const Text = ({ children }) => (
-  <Typography variant="body1">{children}</Typography>
-);
 
 const Bio = () => {
   const classes = useStyles();
