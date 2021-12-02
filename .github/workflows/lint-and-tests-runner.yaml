@@ -1,12 +1,12 @@
-name: Run lint and tests
+name: Lint and Tests Workflow
 'on': [pull_request]
 jobs:
   lint-and-tests-runner:
-    name: lint and tests runner
+    name: Lint and Tests Runner
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Running lint and tests
+      - name: Run lint and tests
         run: |
           npm install
           npm run lint
