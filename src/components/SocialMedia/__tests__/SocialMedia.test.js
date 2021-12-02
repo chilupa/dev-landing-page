@@ -1,6 +1,8 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import SocialMedia from '../SocialMedia';
+
+window.open = jest.fn();
 
 describe('SocialMedia', () => {
   it('should render SocialMedia component', () => {
@@ -10,6 +12,9 @@ describe('SocialMedia', () => {
   it('should open a new browser tab when social media icons are clicked', () => {
     const { getByTestId } = render(<SocialMedia />);
     const githubButton = getByTestId('github');
-    expect(githubButton).toBeInTheDocument();
+
+    fireEvent.click(githubButton);
+
+    expect(window.open).toHaveBeenCalledTimes(1);
   });
 });

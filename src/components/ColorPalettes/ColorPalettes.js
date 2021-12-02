@@ -13,10 +13,17 @@ const colorPalettes = [
 const ColorPalettes = ({ setOpenToast, handlePaletteChange }) => {
   return (
     <Slide direction="right" in={true} mountOnEnter unmountOnExit>
-      <Box display="flex" flexDirection="row" gap={2} pr={2}>
+      <Box
+        data-testid="color-palette"
+        display="flex"
+        flexDirection="row"
+        gap={2}
+        pr={2}
+      >
         {colorPalettes.map(({ primary, secondary }, index) => (
           <Box
             key={index}
+            data-testid="theme"
             display="flex"
             flexDirection="row"
             sx={{
