@@ -25,6 +25,10 @@ This application has been deployed using AWS Amplify.
 
 https://master.d1mxeizd5j5ul.amplifyapp.com
 
+### Workflow 🔧
+
+Github workflow is setup for this project which runs lint and test cases on opening a pull request.
+
 ### Development 👨‍💻
 
 To run the application in development mode
