@@ -2,6 +2,16 @@
 
 A minimal introductory page for developers. Feel free to make yours!
 
+### Deployment 🚀
+
+This application has been deployed using AWS Amplify.
+
+https://master.d1mxeizd5j5ul.amplifyapp.com
+
+### Workflow 🔧
+
+Github workflow is setup for this project which runs lint and test cases on opening a pull request.
+
 ### Application
 
 Keeping responsiveness in mind, I have developed this app which can fit in all the devices - PCs to mobile devices.
@@ -18,16 +28,6 @@ Keeping responsiveness in mind, I have developed this app which can fit in all t
     <td style="width: 50%; height: 140px"><img src="public/images/mobile-view.png" alt="mobile-view"/></td>
  </tr>
 </table>
-
-### Deployment 🚀
-
-This application has been deployed using AWS Amplify.
-
-https://master.d1mxeizd5j5ul.amplifyapp.com
-
-### Workflow 🔧
-
-Github workflow is setup for this project which runs lint and test cases on opening a pull request.
 
 ### Development 👨‍💻
 
