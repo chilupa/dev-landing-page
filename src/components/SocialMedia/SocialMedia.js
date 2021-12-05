@@ -11,12 +11,12 @@ const icons = [
     url: 'https://www.linkedin.com/in/pavanchilukuri/',
   },
   {
-    label: 'Twitter',
+    label: 'twitter',
     name: <Twitter />,
     url: 'https://twitter.com/ichilupa',
   },
   {
-    label: 'Dev',
+    label: 'dev',
     name: <LogoDev />,
     url: 'https://dev.to/chilupa',
   },

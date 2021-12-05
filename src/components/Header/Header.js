@@ -11,7 +11,7 @@ const Header = ({ handlePaletteChange }) => {
   const [openToast, setOpenToast] = useState(false);
 
   return (
-    <Box pt={1}>
+    <Box pt={1} data-testid="header">
       <Box display="flex" alignItems="center" justifyContent="flex-end">
         {toggle && (
           <ColorPalettes
@@ -21,13 +21,14 @@ const Header = ({ handlePaletteChange }) => {
         )}
         <Box>
           <IconButton
+            data-testid="toggle-button"
             aria-label="color palette"
             onClick={() => setToggle(!toggle)}
           >
             {!toggle ? (
-              <PaletteIcon color="warning" />
+              <PaletteIcon color="warning" data-testid="palette-icon" />
             ) : (
-              <CloseIcon color="error" />
+              <CloseIcon color="error" data-testid="close-icon" />
             )}
           </IconButton>
         </Box>

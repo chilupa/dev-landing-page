@@ -1,7 +1,8 @@
-name: Run lint and tests
+name: Lint and Tests Workflow
 'on': [pull_request]
 jobs:
-  lint-runner:
+  lint-and-tests-runner:
+    name: Lint and Tests Runner
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

@@ -12,6 +12,7 @@ const Toast = ({ open, setOpen, message }) => {
   };
   return (
     <Snackbar
+      data-testid="snackbar"
       anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
       open={open}
       autoHideDuration={3000}
